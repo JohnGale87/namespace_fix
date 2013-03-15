@@ -1,9 +1,7 @@
-namespace_fix
+Namespace Fix
 =============
 
 AppEngine Datastore Namespace Fix
-
-So.... I finally got annoyed enough with this to bother doing something...
 
 Attached is my Chrome and Firefox extension that gets arround this annoying bug.
 
@@ -25,6 +23,8 @@ The script only runs on appengine pages (those with appengine.google.com) in the
 Note: The script seems to run much faster in chrome than on firefox.
 
 
-Version 1: Initial Release.
-Version 2: Update to prevent the namespace being cleared when editing an entity.
-Version 3: Update to handle the -global- namespace much better than before.
+Release History
+--------------------
+* Version 1: Initial Release.
+* Version 2: Update to prevent the namespace being cleared when editing an entity.
+* Version 3: Update to handle the -global- namespace much better than before.
