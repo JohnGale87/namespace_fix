@@ -20,7 +20,7 @@ To clear the saved namespace navigate away from the datastore viewer, just go to
 
 The script only runs on appengine pages (those with appengine.google.com) in the url so will not interfear with anything else.
 
-**Note: The script seems to run much faster in chrome than on firefox.**
+**Note: The script seems to run much faster in Chrome than on Firefox.**
 
 
 Release History
