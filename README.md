@@ -28,3 +28,4 @@ Release History
 * Version 1: Initial Release.
 * Version 2: Update to prevent the namespace being cleared when editing an entity.
 * Version 3: Update to handle the -global- namespace much better than before.
+* Version 4: Prevent alert dialog when no namespace is set yet.
