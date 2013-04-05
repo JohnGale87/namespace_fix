@@ -2,7 +2,7 @@
 // @name        AppEngineNamespaceFix
 // @description Userscript fix for AppEngine Namespace Bug. http://code.google.com/p/googleappengine/issues/detail?id=8164
 // @namespace   http://127.0.0.1
-// @version     4
+// @version     5
 // @include     http://www.appengine.google.com/*
 // @include     https://www.appengine.google.com/*
 // @include     http://appengine.google.com/*
@@ -26,15 +26,17 @@ if (!this.GM_getValue || (this.GM_getValue.toString && this.GM_getValue.toString
 var url = window.location.href;
 var namespace_set = (GM_getValue("appEngine_NamespaceSet", 0) > 0);
 if (url.indexOf('datastore/explorer') > -1 || url.indexOf('datastore/edit') > -1){
-	var namespace = GM_getValue("appEngine_Namespace", "-global-");
+	var namespace = GM_getValue("appEngine_Namespace");
 	if (url.indexOf('&namespace=') < 0){
-		if (!namespace_set) namespace = prompt("Enter namespace...", namespace);
+		if (!namespace_set) namespace = prompt("Enter namespace...", "-global-");
 		if (namespace != null){
 			GM_setValue("appEngine_Namespace", namespace);
 			GM_setValue("appEngine_NamespaceSet", 1);
 			if (namespace != null && namespace != ""){
 				window.location.href = url + '&namespace=' + namespace;
 			}
+		} else {
+			GM_setValue("appEngine_NamespaceSet", 1);
 		}
 	}
 } else {

@@ -29,3 +29,4 @@ Release History
 * Version 2: Update to prevent the namespace being cleared when editing an entity.
 * Version 3: Update to handle the -global- namespace much better than before.
 * Version 4: Prevent alert dialog when no namespace is set yet.
+* Version 5: For applications that do not use namespaces canceling the dialog will prevent it re-showing.
